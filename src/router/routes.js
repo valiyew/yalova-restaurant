@@ -1,13 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import GalleryComponent from "../components/GalleryComponent.vue";
-import HomeComponent from "../components/HomeComponent.vue";
-import ContactComponent from "../components/ContactComponent.vue";
+import {
+  ContactComponent,
+  GalleryComponent,
+  HomeComponent,
+  MenuComponent,
+} from "../components/index";
 
 const routes = [
   { path: "/", component: HomeComponent, name: "HomeComponent" },
   { path: "/gallery", component: GalleryComponent, name: "GalleryComponent" },
   { path: "/contact", component: ContactComponent, name: "ContactComponent" },
+  { path: "/menu", component: MenuComponent, name: "MenuComponent" },
   { path: "/:pathMatch(.*)*", redirect: "/" },
 ];
 

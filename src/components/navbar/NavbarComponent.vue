@@ -20,14 +20,15 @@
         </a>
       </div>
       <ul>
-        <li
-          v-for="(item, index) in menuItems"
-          :key="index"
-          :class="{ active: activeIndex === index }"
-          @click="handleActive(index)"
-        >
-          {{ item }}
-        </li>
+        <router-link v-for="(item, idx) in routes" :to="item.path">
+          <li
+            :key="idx"
+            :class="{ active: activeIndex === idx }"
+            @click="handleActive(idx)"
+          >
+            {{ item.name }}
+          </li>
+        </router-link>
 
         <div>
           <Select
@@ -49,14 +50,15 @@
           <i @click="toggleBurger" class="fa-solid fa-xmark"></i>
 
           <ul>
-            <li
-              v-for="(item, index) in menuItems"
-              :key="index"
-              :class="{ active: activeIndex === index }"
-              @click="handleActive(index)"
-            >
-              {{ item }}
-            </li>
+            <router-link v-for="(item, idx) in routes" :to="item.path">
+              <li
+                :key="idx"
+                :class="{ active: activeIndex === idx }"
+                @click="handleActive(idx)"
+              >
+                {{ item.name }}
+              </li>
+            </router-link>
 
             <div>
               <Select
@@ -69,16 +71,16 @@
         </div>
 
         <div class="networks">
-          <a @click="toggleBurger" href="#facebook">
+          <a href="#facebook">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-          <a @click="toggleBurger" href="#twitter">
+          <a href="#twitter">
             <i class="fa-brands fa-twitter"></i>
           </a>
-          <a @click="toggleBurger" href="#instagram">
+          <a href="#instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a @click="toggleBurger" href="#telegram">
+          <a href="#telegram">
             <i class="fa-brands fa-telegram"></i>
           </a>
         </div>
@@ -101,14 +103,18 @@ const selectedLanguages = ref(
   languages.value.find((lang) => lang.code === "EN")
 );
 
-const menuItems = ["Home", "Gallery", "Menu", "Contact"];
+const routes = [
+  { path: "/", name: "Home" },
+  { path: "/gallery", name: "Gallery" },
+  { path: "/contact", name: "Contact" },
+  { path: "/menu", name: "Menu" },
+];
 const activeIndex = ref(null);
 
 const isOpen = ref(false);
 
 const handleActive = (index) => {
   activeIndex.value = index;
-  isOpen.value = !isOpen.value;
 };
 
 const toggleBurger = () => {
@@ -117,6 +123,9 @@ const toggleBurger = () => {
 </script>
 
 <style lang="scss" scoped>
+a {
+  text-decoration: none;
+}
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;
@@ -219,6 +228,12 @@ nav {
 
   .burger-navbar-section {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  nav {
+    padding: 0px 40px 0px 0px;
   }
 }
 
