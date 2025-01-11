@@ -57,6 +57,8 @@
 
 <style lang="scss" scoped>
 footer {
+  position: relative;
+  z-index: 3;
   background: var(--footer-bg);
   width: 100%;
   padding: 90px 0px;
@@ -183,7 +185,7 @@ footer {
 
   @media screen and (max-width: 1450px) {
     .about {
-      padding: 0px 50px 0px 30px;
+      padding: 20px;
     }
   }
 
@@ -191,7 +193,7 @@ footer {
     .footer-contact .bold-separator {
       gap: 50px;
       width: 100%;
-      padding: 50px;
+      padding: 20px;
 
       .line {
         width: 50%;
@@ -206,6 +208,8 @@ footer {
 }
 
 .tap-top-holder {
+  position: relative;
+  z-index: 3;
   background: var(--footer-holder-bg);
   width: 100%;
   .container {

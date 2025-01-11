@@ -242,7 +242,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 50px 0px 20px;
+    padding: 0px 30px 0px 0px;
 
     .mains {
       display: none;

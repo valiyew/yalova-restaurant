@@ -14,9 +14,12 @@
       </div>
     </div>
   </div>
+  <DiscoverComponent />
 </template>
 
-<script setup></script>
+<script setup>
+import DiscoverComponent from "./homeComponent/DiscoverComponent.vue";
+</script>
 
 <style lang="scss" scoped>
 .image-container {
@@ -28,6 +31,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 0;
   }
 
   .overlay {
