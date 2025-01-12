@@ -3,7 +3,7 @@
     <img src="../assets/jason-leung-poI7DelFiVA-unsplash.jpg" alt="" />
     <div class="overlay"></div>
     <div class="home-title">
-      <h3>Welcome to Lambert</h3>
+      <h3>Welcome to Yalova</h3>
       <div class="title">
         <div></div>
         <p>Responsive restaurant template</p>
