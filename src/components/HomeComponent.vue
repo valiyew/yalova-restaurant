@@ -16,10 +16,15 @@
   </div>
   <DiscoverComponent />
   <OpenHourComponent />
+  <OurRestaurantComponent />
 </template>
 
 <script setup>
-import { DiscoverComponent, OpenHourComponent } from "./homeComponent/index";
+import {
+  DiscoverComponent,
+  OpenHourComponent,
+  OurRestaurantComponent,
+} from "./homeComponent/index";
 </script>
 
 <style lang="scss" scoped>
