@@ -10,10 +10,14 @@
     </div>
   </div>
   <ContactInfoComponent />
+  <OurLocationComponent />
 </template>
 
 <script setup>
-import { ContactInfoComponent } from "./contactComponent/index";
+import {
+  ContactInfoComponent,
+  OurLocationComponent,
+} from "./contactComponent/index";
 </script>
 
 <style lang="scss" scoped>

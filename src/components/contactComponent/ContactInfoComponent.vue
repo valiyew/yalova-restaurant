@@ -2,14 +2,14 @@
   <div class="our-contact">
     <div class="contact">
       <div class="contact-info">
-        <h3>Contact info</h3>
-        <p>
+        <h3 data-aos="zoom-in-up">Contact info</h3>
+        <p data-aos="zoom-in-up">
           Numerous commentators have also referred to the supposed restaurant
           owner's eccentric habit of touting for custom outside his
           establishment, dressed in aristocratic fashion and brandishing a sword
         </p>
 
-        <p>
+        <p data-aos="zoom-in-up">
           Numerous commentators have also referred to the supposed restaurant
           owner's eccentric habit of touting for custom outside his
           establishment, dressed in aristocratic fashion and brandishing a sword
@@ -17,13 +17,13 @@
       </div>
       <div class="contact-city">
         <div style="display: flex; flex-direction: column; gap: 40px">
-          <ul>
+          <ul data-aos="zoom-in-up">
             <h5>Lambert - New York City</h5>
             <li>27th Brooklyn Toshkent Uzbekistan</li>
             <li>+998(99)999-99-99</li>
             <li>qwerty@gmail.com</li>
           </ul>
-          <ul>
+          <ul data-aos="zoom-in-up">
             <h5>Lambert - New York City</h5>
             <li>27th Brooklyn Toshkent Uzbekistan</li>
             <li>+998(99)999-99-99</li>
@@ -31,7 +31,7 @@
           </ul>
         </div>
         <div>
-          <ul>
+          <ul data-aos="zoom-in-up">
             <h5>Lambert - New York City</h5>
             <li>27th Brooklyn Toshkent Uzbekistan</li>
             <li>+998(99)999-99-99</li>
@@ -49,7 +49,7 @@
       </div>
     </div>
 
-    <h2>Our Location</h2>
+    <h2 data-aos="zoom-in-up">Our Location</h2>
   </div>
 </template>
 
@@ -189,6 +189,10 @@
       .bold-separator {
         gap: 30px;
       }
+    }
+
+    h2 {
+      font-size: 28px;
     }
   }
 }
