@@ -1,6 +1,6 @@
 <template>
   <section class="our-restaurant">
-    <div class="our-restaurant-img" data-aos="zoom-in-right">
+    <div class="our-restaurant-img" data-aos="zoom-in-up">
       <img src="../../assets/jason-leung-poI7DelFiVA-unsplash.jpg" alt="" />
     </div>
     <div class="our-restaurant-title">
@@ -16,7 +16,7 @@
           <div></div>
         </div>
       </div>
-      <p data-aos="zoom-in-left">
+      <p data-aos="zoom-in-up">
         The History of Kitchens and Cooks gives further intimation on Mr
         Boulanger usual menu, stating confidently that "Boulanger served salted
         poultry and fresh eggs, all presented without a tablecloth on small
@@ -29,7 +29,7 @@
         establishment, dressed in aristocratic fashion and brandishing a sword
       </p>
 
-      <h4 data-aos="zoom-in-left">View Gallery</h4>
+      <h4 data-aos="zoom-in-up">View Gallery</h4>
     </div>
   </section>
 </template>

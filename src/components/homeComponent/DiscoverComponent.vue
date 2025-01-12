@@ -1,8 +1,8 @@
 <template>
   <section class="discover">
     <div class="discover-title">
-      <h3 data-aos="zoom-in-up">Discover</h3>
-      <div class="line" data-aos="zoom-in-up">
+      <h3 data-aos="zoom-in-up" >Discover</h3>
+      <div class="line" data-aos="zoom-in-up" >
         <div>
           <div></div>
           <div></div>
@@ -13,7 +13,7 @@
           <div></div>
         </div>
       </div>
-      <p data-aos="zoom-in-right">
+      <p data-aos="zoom-in-up">
         The History of Kitchens and Cooks gives further intimation on Mr
         Boulanger usual menu, stating confidently that "Boulanger served salted
         poultry and fresh eggs, all presented without a tablecloth on small
@@ -27,9 +27,9 @@
         dressed in aristocratic fashion and brandishing a sword
       </p>
 
-      <h4 data-aos="zoom-in-right">Discover our menu</h4>
+      <h4 data-aos="zoom-in-up" >Discover our menu</h4>
     </div>
-    <div class="discover-img" data-aos="zoom-in-left">
+    <div class="discover-img" data-aos="zoom-in-up">
       <img src="../../assets/jason-leung-poI7DelFiVA-unsplash.jpg" alt="" />
     </div>
   </section>
