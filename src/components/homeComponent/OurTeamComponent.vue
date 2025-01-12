@@ -29,26 +29,28 @@
 </template>
 
 <script setup>
+import chefImage from "/src/assets/shef.jpg";
+
 const chefs = [
   {
     name: "Andy Moro",
     description: "Master chef in Brooklin",
-    img: "/src/assets/shef.jpg",
+    img: chefImage,
   },
   {
     name: "Andy Moro",
     description: "Master chef in Brooklin",
-    img: "/src/assets/shef.jpg",
+    img: chefImage,
   },
   {
     name: "Andy Moro",
     description: "Master chef in Brooklin",
-    img: "/src/assets/shef.jpg",
+    img: chefImage,
   },
   {
     name: "Andy Moro",
     description: "Master chef in Brooklin",
-    img: "/src/assets/shef.jpg",
+    img: chefImage,
   },
 ];
 </script>
