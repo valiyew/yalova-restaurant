@@ -33,7 +33,13 @@
     </div>
 
     <div class="burger-navbar">
-      <i @click="toggleBurger" class="fa-solid fa-bars"></i>
+      <i
+        v-if="isScrolled"
+        @click="toggleBurger"
+        style="color: var(--black)"
+        class="fa-solid fa-bars"
+      ></i>
+      <i v-else @click="toggleBurger" class="fa-solid fa-bars"></i>
     </div>
 
     <Transition>

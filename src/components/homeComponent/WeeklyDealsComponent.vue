@@ -3,16 +3,21 @@
   <section class="weekly-deals">
     <div class="overlay"></div>
     <div class="weekly-deals-title">
-      <h1>Weekly Deals</h1>
-      <h3>Investigationes demonstraverunt lectores</h3>
-      <div class="bold-separator">
+      <h1 data-aos="zoom-in-up">Weekly Deals</h1>
+      <h3 data-aos="zoom-in-up">Investigationes demonstraverunt lectores</h3>
+      <div class="bold-separator" data-aos="zoom-in-up">
         <div class="line"></div>
         <div class="dot"></div>
         <div class="line"></div>
       </div>
 
       <div class="menu-data">
-        <div class="menu-item" v-for="(item, index) in menuItems" :key="index">
+        <div
+          class="menu-item"
+          v-for="(item, index) in menuItems"
+          :key="index"
+          data-aos="zoom-in-up"
+        >
           <div class="menu-item-description">
             <h4>{{ item.day }}</h4>
             <span>( {{ item.description }} )</span>

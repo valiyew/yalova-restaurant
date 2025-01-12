@@ -1,15 +1,15 @@
 <template>
   <section class="our-team">
     <div class="our-team-title">
-      <h1>Our Team</h1>
-      <h3>High-class professional service</h3>
-      <p>
+      <h1 data-aos="zoom-in-up">Our Team</h1>
+      <h3 data-aos="zoom-in-up">High-class professional service</h3>
+      <p data-aos="zoom-in-up">
         Numerous commentators have also referred to the supposed restaurant
         owner's eccentric habit of touting for custom <br />
         outside his establishment, dressed in aristocratic fashion and
         brandishing a sword
       </p>
-      <div class="bold-separator">
+      <div class="bold-separator" data-aos="zoom-in-up">
         <div class="line"></div>
         <div class="dot"></div>
         <div class="line"></div>
@@ -17,10 +17,10 @@
 
       <div class="about-chef">
         <div class="chef-item" v-for="(item, index) in chefs" :key="index">
-          <img :src="item.img" alt="" />
+          <img :src="item.img" alt="" data-aos="zoom-in-up" />
           <div>
-            <h4>{{ item.name }}</h4>
-            <p>{{ item.description }}</p>
+            <h4 data-aos="zoom-in-up">{{ item.name }}</h4>
+            <p data-aos="zoom-in-up">{{ item.description }}</p>
           </div>
         </div>
       </div>

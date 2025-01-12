@@ -1,7 +1,7 @@
 <template>
   <section class="opening-hour">
     <div class="overlay"></div>
-    <div class="opening-title">
+    <div class="opening-title" data-aos="zoom-out">
       <h1>Opening Hours</h1>
       <h3>Call For Reservations</h3>
       <div class="bold-separator">
@@ -21,7 +21,7 @@
           <p>19:00</p>
         </div>
       </div>
-      <a href="tel:+998999999999">+998(99)999-99-99</a>
+      <a href="tel:+998999999999" data-aos="zoom-out">+998(99)999-99-99</a>
     </div>
   </section>
 </template>

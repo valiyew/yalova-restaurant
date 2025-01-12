@@ -2,26 +2,26 @@
   <footer>
     <div class="about">
       <div class="about-us">
-        <h3>About Us</h3>
-        <p>
+        <h3 data-aos="zoom-in-up">About Us</h3>
+        <p data-aos="zoom-in-up">
           Numerous commentators have also referred to the supposed restaurant
           owner's eccentric habit of touting for custom outside his
           establishment, dressed in aristocratic fashion and brandishing a sword
         </p>
       </div>
       <div class="find-us">
-        <h3>Find Us</h3>
+        <h3 data-aos="zoom-in-up">Find Us</h3>
         <div>
-          <a href="#facebook">
+          <a data-aos="zoom-in-up" href="#facebook">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="#twitter">
+          <a data-aos="zoom-in-up" href="#twitter">
             <i class="fa-brands fa-twitter"></i>
           </a>
-          <a href="#instagram">
+          <a data-aos="zoom-in-up" href="#instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="#telegram">
+          <a data-aos="zoom-in-up" href="#telegram">
             <i class="fa-brands fa-telegram"></i>
           </a>
         </div>
@@ -29,26 +29,26 @@
     </div>
 
     <div class="footer-contact">
-      <div class="bold-separator">
+      <div class="bold-separator" data-aos="zoom-in-up">
         <div class="line"></div>
         <div class="dot"></div>
         <div class="line"></div>
       </div>
 
       <ul>
-        <li>+7(111)123456789</li>
-        <li>27th Brooklyn New York, NY 10065</li>
-        <li>yourmail@domain.com</li>
+        <li data-aos="zoom-in-up">+7(111)123456789</li>
+        <li data-aos="zoom-in-up">27th Brooklyn New York, NY 10065</li>
+        <li data-aos="zoom-in-up">yourmail@domain.com</li>
       </ul>
     </div>
   </footer>
   <div class="tap-top-holder">
     <div class="container">
       <div>
-        <p>© Yalova 2015 .</p>
-        <span> All rights reserved.</span>
+        <p data-aos="zoom-in-up">© Yalova 2015 .</p>
+        <span data-aos="zoom-in-up"> All rights reserved.</span>
       </div>
-      <p>Back To Top</p>
+      <p data-aos="zoom-in-up">Back To Top</p>
     </div>
   </div>
 </template>
