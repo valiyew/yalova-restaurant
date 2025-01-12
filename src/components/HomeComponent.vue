@@ -17,6 +17,7 @@
   <DiscoverComponent />
   <OpenHourComponent />
   <OurRestaurantComponent />
+  <WeeklyDealsComponent />
 </template>
 
 <script setup>
@@ -24,6 +25,7 @@ import {
   DiscoverComponent,
   OpenHourComponent,
   OurRestaurantComponent,
+  WeeklyDealsComponent,
 } from "./homeComponent/index";
 </script>
 
