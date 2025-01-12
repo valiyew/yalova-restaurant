@@ -98,8 +98,8 @@
       font-size: 16px;
       line-height: 24px;
       padding-bottom: 10px;
-      color: #666;
       font-family: "Source Sans Pro", sans-serif;
+      color: var(--p-color);
     }
 
     h4 {

@@ -15,10 +15,11 @@
     </div>
   </div>
   <DiscoverComponent />
+  <OpenHourComponent />
 </template>
 
 <script setup>
-import DiscoverComponent from "./homeComponent/DiscoverComponent.vue";
+import { DiscoverComponent, OpenHourComponent } from "./homeComponent/index";
 </script>
 
 <style lang="scss" scoped>
@@ -40,6 +41,8 @@ import DiscoverComponent from "./homeComponent/DiscoverComponent.vue";
 
   .overlay {
     position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;
