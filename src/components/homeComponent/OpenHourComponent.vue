@@ -1,4 +1,3 @@
-{/*
 <template>
   <section class="opening-hour">
     <div class="overlay"></div>
@@ -159,8 +158,11 @@
       a {
         font-size: 22px;
       }
+
+      .bold-separator {
+        gap: 30px;
+      }
     }
   }
 }
 </style>
-*/}

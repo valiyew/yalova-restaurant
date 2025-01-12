@@ -272,6 +272,10 @@ const menuItems = [
         font-size: 22px;
       }
 
+      .bold-separator {
+        gap: 30px;
+      }
+
       .menu-data {
         width: 90%;
 
