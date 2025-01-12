@@ -1,35 +1,27 @@
 <template>
-  <nav>
+  <nav :class="{ scrolled: isScrolled }">
     <div class="logo">
-      <img src="../../assets/yalovaLogo.png" alt="" />
+      <img v-if="isScrolled" src="../../assets/yalovaLogo2.png" alt="" />
+      <img v-else src="../../assets/yalovaLogo.png" alt="Logo" />
     </div>
 
     <div class="mains">
-      <div class="networks">
-        <a href="#facebook">
-          <i class="fa-brands fa-facebook-f"></i>
-        </a>
-        <a href="#twitter">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a href="#instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="#telegram">
-          <i class="fa-brands fa-telegram"></i>
-        </a>
+      <div v-if="isScrolled"></div>
+      <div v-else class="networks">
+        <a href="#facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#telegram"><i class="fa-brands fa-telegram"></i></a>
       </div>
       <ul>
-        <router-link v-for="(item, idx) in routes" :to="item.path">
+        <router-link v-for="(item, idx) in routes" :to="item.path" :key="idx">
           <li
-            :key="idx"
             :class="{ active: activeIndex === idx }"
             @click="handleActive(idx)"
           >
             {{ item.name }}
           </li>
         </router-link>
-
         <div>
           <Select
             v-model="selectedLanguages"
@@ -48,18 +40,19 @@
       <div v-if="isOpen" class="burger-navbar-section">
         <div>
           <i @click="toggleBurger" class="fa-solid fa-xmark"></i>
-
           <ul>
-            <router-link v-for="(item, idx) in routes" :to="item.path">
+            <router-link
+              v-for="(item, idx) in routes"
+              :to="item.path"
+              :key="idx"
+            >
               <li
-                :key="idx"
                 :class="{ active: activeIndex === idx }"
                 @click="handleActive(idx)"
               >
                 {{ item.name }}
               </li>
             </router-link>
-
             <div>
               <Select
                 v-model="selectedLanguages"
@@ -69,20 +62,11 @@
             </div>
           </ul>
         </div>
-
         <div class="networks">
-          <a href="#facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="#twitter">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-          <a href="#instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="#telegram">
-            <i class="fa-brands fa-telegram"></i>
-          </a>
+          <a href="#facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#telegram"><i class="fa-brands fa-telegram"></i></a>
         </div>
       </div>
     </Transition>
@@ -90,7 +74,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import Select from "primevue/select";
 
 const languages = ref([
@@ -98,7 +82,6 @@ const languages = ref([
   { name: "En", code: "EN" },
   { name: "Ru", code: "RU" },
 ]);
-
 const selectedLanguages = ref(
   languages.value.find((lang) => lang.code === "EN")
 );
@@ -112,14 +95,26 @@ const routes = [
 const activeIndex = ref(null);
 
 const isOpen = ref(false);
+const toggleBurger = () => {
+  isOpen.value = !isOpen.value;
+};
 
+const isScrolled = ref(false);
 const handleActive = (index) => {
   activeIndex.value = index;
 };
 
-const toggleBurger = () => {
-  isOpen.value = !isOpen.value;
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50;
 };
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -142,20 +137,36 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 0px 150px;
+  height: 150px;
   width: 100%;
   top: 0;
   background: none;
   z-index: 20;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &.scrolled {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    .mains {
+      margin-top: 35px;
+      ul {
+        li {
+          color: var(--black);
+        }
+      }
+    }
+  }
 
   .logo {
     img {
       width: 100%;
-      height: 180px;
+      height: 150px;
     }
   }
 
   .mains {
-    margin-top: 45px;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     gap: 20px;
