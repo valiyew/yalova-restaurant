@@ -1,13 +1,13 @@
 <template>
-  <div class="dessert">
+  <div class="drink">
     <div class="overlay"></div>
-    <div class="dessert-title">
+    <div class="drink-title">
       <h1 data-aos="zoom-in-up">Drinks</h1>
       <p data-aos="zoom-in-up">Donec eu libero</p>
     </div>
   </div>
 
-  <div class="dessert-container">
+  <div class="drink-container">
     <div class="menu-item-box">
       <div
         data-aos="zoom-in-up"
@@ -68,7 +68,7 @@ const menuItems = [
 </script>
 
 <style lang="scss" scoped>
-.dessert {
+.drink {
   width: 100%;
   height: 65vh;
   position: relative;
@@ -95,7 +95,7 @@ const menuItems = [
     opacity: 0.6;
   }
 
-  .dessert-title {
+  .drink-title {
     width: 100%;
     z-index: 3;
 
@@ -117,7 +117,7 @@ const menuItems = [
   }
 }
 
-.dessert-container {
+.drink-container {
   width: 100%;
   padding: 100px 150px;
   display: flex;
@@ -199,13 +199,13 @@ const menuItems = [
 }
 
 @media screen and (max-width: 1450px) {
-  .dessert-container {
+  .drink-container {
     padding: 100px 30px;
   }
 }
 
 @media screen and (max-width: 992px) {
-  .dessert-container {
+  .drink-container {
     .menu-item-box {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
@@ -213,15 +213,40 @@ const menuItems = [
   }
 }
 
+@media screen and (max-width: 776px) {
+  .drink-container {
+    .menu-item-box {
+      .menu-item {
+        .menu-item-title {
+          h4 {
+            font-size: 18px;
+          }
+
+          h5 {
+            font-size: 14px;
+          }
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .bold-separator {
+      gap: 30px;
+    }
+  }
+}
+
 @media screen and (max-width: 576px) {
-  .dessert-container {
+  .drink-container {
     .bold-separator {
       gap: 30px;
     }
   }
 
-  .dessert {
-    .dessert-title {
+  .drink {
+    .drink-title {
       h1 {
         font-size: 32px;
       }

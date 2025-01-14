@@ -213,6 +213,31 @@ const menuItems = [
   }
 }
 
+@media screen and (max-width: 776px) {
+  .dessert-container {
+    .menu-item-box {
+      .menu-item {
+        .menu-item-title {
+          h4 {
+            font-size: 18px;
+          }
+
+          h5 {
+            font-size: 14px;
+          }
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .bold-separator {
+      gap: 30px;
+    }
+  }
+}
+
 @media screen and (max-width: 576px) {
   .dessert-container {
     .bold-separator {
