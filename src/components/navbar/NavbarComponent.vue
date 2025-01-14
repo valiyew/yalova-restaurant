@@ -36,7 +36,7 @@
       <i
         v-if="isScrolled"
         @click="toggleBurger"
-        style="color: var(--black)"
+        style="color: var(--black); margin-top: 20px"
         class="fa-solid fa-bars"
       ></i>
       <i v-else @click="toggleBurger" class="fa-solid fa-bars"></i>
@@ -153,9 +153,12 @@ nav {
   &.scrolled {
     background: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    height: 110px;
+    display: flex;
+    align-items: center;
 
     .mains {
-      margin-top: 35px;
+      margin-bottom: 45px;
       ul {
         li {
           color: var(--black);
