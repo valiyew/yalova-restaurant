@@ -1,8 +1,8 @@
 <template>
   <section class="discover">
     <div class="discover-title">
-      <h3 data-aos="zoom-in-up" >Discover</h3>
-      <div class="line" data-aos="zoom-in-up" >
+      <h3 data-aos="zoom-in-up">Discover</h3>
+      <div class="line" data-aos="zoom-in-up">
         <div>
           <div></div>
           <div></div>
@@ -27,7 +27,9 @@
         dressed in aristocratic fashion and brandishing a sword
       </p>
 
-      <h4 data-aos="zoom-in-up" >Discover our menu</h4>
+      <router-link to="/menu">
+        <h4 data-aos="zoom-in-up">Discover our menu</h4>
+      </router-link>
     </div>
     <div class="discover-img" data-aos="zoom-in-up">
       <img src="../../assets/jason-leung-poI7DelFiVA-unsplash.jpg" alt="" />
@@ -102,12 +104,20 @@
       color: var(--p-color);
     }
 
-    h4 {
-      text-align: left;
-      font-size: 26px;
-      font-weight: bold;
-      color: var(--primary);
-      font-family: "Playball", cursive;
+    a {
+      text-decoration: none;
+      h4 {
+        text-align: left;
+        font-size: 26px;
+        font-weight: bold;
+        color: var(--primary);
+        font-family: "Playball", cursive;
+        transition: 0.6s;
+
+        &:hover {
+          color: var(--black);
+        }
+      }
     }
   }
 

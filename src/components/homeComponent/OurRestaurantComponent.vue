@@ -29,7 +29,9 @@
         establishment, dressed in aristocratic fashion and brandishing a sword
       </p>
 
-      <h4 data-aos="zoom-in-up">View Gallery</h4>
+      <router-link to="/gallery">
+        <h4 data-aos="zoom-in-up">View Gallery</h4>
+      </router-link>
     </div>
   </section>
 </template>
@@ -101,12 +103,20 @@
       color: var(--p-color);
     }
 
-    h4 {
-      text-align: left;
-      font-size: 26px;
-      font-weight: bold;
-      color: var(--primary);
-      font-family: "Playball", cursive;
+    a {
+      text-decoration: none;
+      h4 {
+        text-align: left;
+        font-size: 26px;
+        font-weight: bold;
+        color: var(--primary);
+        font-family: "Playball", cursive;
+        transition: 0.6s;
+
+        &:hover {
+          color: var(--black);
+        }
+      }
     }
   }
 
