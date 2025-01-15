@@ -1,32 +1,33 @@
 <template>
   <nav :class="{ scrolled: isScrolled }">
     <div class="logo">
-      <img v-if="isScrolled" src="../../assets/yalovaLogo2.png" alt="" />
+      <img v-if="isScrolled" src="../../assets/yalovaLogo2.png" alt="Logo" />
       <img v-else src="../../assets/yalovaLogo.png" alt="Logo" />
     </div>
 
     <div class="mains">
-      <div v-if="isScrolled"></div>
-      <div v-else class="networks">
+      <div v-if="!isScrolled" class="networks">
         <a href="#facebook"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="#twitter"><i class="fa-brands fa-twitter"></i></a>
         <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
         <a href="#telegram"><i class="fa-brands fa-telegram"></i></a>
       </div>
+
       <ul>
         <router-link v-for="(item, idx) in routes" :to="item.path" :key="idx">
           <li
             :class="{ active: activeIndex === idx }"
             @click="handleActive(idx)"
           >
-            {{ item.name }}
+            {{ t(`nav.${item.message}`) }}
           </li>
         </router-link>
         <div>
           <Select
-            v-model="selectedLanguages"
+            v-model="selectedLanguage"
             :options="languages"
-            optionLabel="name"
+            option-label="name"
+            @change="changeLanguage(selectedLanguage.code)"
           />
         </div>
       </ul>
@@ -56,14 +57,15 @@
                 :class="{ active: activeIndex === idx }"
                 @click="handleActive(idx)"
               >
-                {{ item.name }}
+                {{ t(`nav.${item.message}`) }}
               </li>
             </router-link>
             <div>
               <Select
-                v-model="selectedLanguages"
+                v-model="selectedLanguage"
                 :options="languages"
-                optionLabel="name"
+                option-label="name"
+                @change="changeLanguage(selectedLanguage.code)"
               />
             </div>
           </ul>
@@ -82,23 +84,43 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import Select from "primevue/select";
+import { useI18n } from "vue-i18n";
+
+const { t, locale } = useI18n();
 
 const languages = ref([
-  { name: "Uz", code: "UZ" },
-  { name: "En", code: "EN" },
-  { name: "Ru", code: "RU" },
+  { name: "Uz", code: "uz" },
+  { name: "En", code: "en" },
+  { name: "Ru", code: "ru" },
 ]);
-const selectedLanguages = ref(
-  languages.value.find((lang) => lang.code === "EN")
+
+const language = localStorage.getItem("locale");
+
+const selectedLanguage = ref(
+  language
+    ? languages.value.find((lang) => lang.code === language)
+    : languages.value.find((lang) => lang.code === "en")
 );
 
+const changeLanguage = (langCode) => {
+  selectedLanguage.value = languages.value.find(
+    (lang) => lang.code === langCode
+  );
+  locale.value = langCode;
+  localStorage.setItem("locale", selectedLanguage.value.code);
+};
+
 const routes = [
-  { path: "/", name: "Home" },
-  { path: "/gallery", name: "Gallery" },
-  { path: "/contact", name: "Contact" },
-  { path: "/menu", name: "Menu" },
+  { path: "/", message: "home", name: "Home" },
+  { path: "/menu", message: "menu", name: "Menu" },
+  { path: "/gallery", message: "gallery", name: "Gallery" },
+  { path: "/contact", message: "contact", name: "Contact" },
 ];
+
 const activeIndex = ref(null);
+const handleActive = (index) => {
+  activeIndex.value = index;
+};
 
 const isOpen = ref(false);
 const toggleBurger = () => {
@@ -106,10 +128,6 @@ const toggleBurger = () => {
 };
 
 const isScrolled = ref(false);
-const handleActive = (index) => {
-  activeIndex.value = index;
-};
-
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 50;
 };
@@ -158,7 +176,7 @@ nav {
     align-items: center;
 
     .mains {
-      margin-bottom: 45px;
+      margin-bottom: 25px;
       ul {
         li {
           color: var(--black);

@@ -3,10 +3,10 @@
     <img src="../assets/jason-leung-poI7DelFiVA-unsplash.jpg" alt="" />
     <div class="overlay"></div>
     <div class="home-title">
-      <h3>Welcome to Yalova</h3>
+      <h3>{{ t("home_hero.welcome") }}</h3>
       <div class="title">
         <div></div>
-        <p>Responsive restaurant template</p>
+        <p>{{ t("home_hero.title") }}</p>
         <div></div>
       </div>
       <div class="half-circle">
@@ -29,6 +29,10 @@ import {
   WeeklyDealsComponent,
   OurTeamComponent,
 } from "./homeComponent/index";
+
+import { useI18n } from "vue-i18n";
+
+const { t, locale } = useI18n();
 </script>
 
 <style lang="scss" scoped>
