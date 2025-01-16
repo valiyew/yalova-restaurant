@@ -62,7 +62,8 @@ import {
 
     h3 {
       width: 100%;
-      font-size: 3.5em;
+      text-transform: uppercase;
+      font-size: 3.0em;
       margin-bottom: 10px;
       color: var(--white);
       font-weight: bold;
@@ -71,7 +72,7 @@ import {
     }
 
     p {
-      font-size: 34px;
+      font-size: 32px;
       font-family: "Playball", cursive;
       color: var(--primary);
     }
