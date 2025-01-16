@@ -120,7 +120,7 @@ const { t, locale } = useI18n();
   @media screen and (max-width: 1030px) {
     .home-title {
       h3 {
-        font-size: 22px;
+        font-size: 32px;
       }
 
       p {
