@@ -9,9 +9,13 @@
       </div>
     </div>
   </div>
+
+  <GalleryComponent />
 </template>
 
-<script setup></script>
+<script setup>
+import { GalleryComponent } from "./galleryComponent/index";
+</script>
 
 <style lang="scss" scoped>
 .image-container {
