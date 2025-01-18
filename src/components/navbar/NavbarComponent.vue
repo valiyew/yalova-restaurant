@@ -165,7 +165,7 @@ nav {
   width: 100%;
   top: 0;
   background: none;
-  z-index: 20;
+  z-index: 10;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
   &.scrolled {

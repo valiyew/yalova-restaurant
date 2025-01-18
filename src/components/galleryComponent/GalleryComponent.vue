@@ -67,27 +67,27 @@ const images = ref([
   {
     id: 6,
     category: "Restaurant",
-    src: "/src/assets/jason-leung-poI7DelFiVA-unsplash.jpg",
+    src: galleryImg,
   },
   {
     id: 7,
     category: "Restaurant",
-    src: "/src/assets/jason-leung-poI7DelFiVA-unsplash.jpg",
+    src: galleryImg,
   },
   {
     id: 8,
     category: "Video",
-    src: "/src/assets/jason-leung-poI7DelFiVA-unsplash.jpg",
+    src: galleryImg,
   },
   {
     id: 9,
     category: "Video",
-    src: "/src/assets/jason-leung-poI7DelFiVA-unsplash.jpg",
+    src: galleryImg,
   },
   {
     id: 10,
     category: "All",
-    src: "/src/assets/jason-leung-poI7DelFiVA-unsplash.jpg",
+    src: galleryImg,
   },
 ]);
 
