@@ -49,7 +49,7 @@
         <span data-aos="zoom-in-up"> All rights reserved.</span>
       </div>
 
-      <a href="#home" class="back-home">
+      <a href="#hero" class="back-home">
         <i class="fa-solid fa-up-long"></i>
         <p>Back To Top</p>
       </a>

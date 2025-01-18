@@ -1,5 +1,5 @@
 <template>
-  <div class="image-container" id="menu">
+  <div class="image-container" id="hero">
     <img src="../assets/jason-leung-poI7DelFiVA-unsplash.jpg" alt="" />
     <div class="overlay"></div>
     <div class="menu-title">
