@@ -32,6 +32,7 @@
 
 <script setup>
 import { ref, computed } from "vue";
+import galleryImg from "/src/assets/jason-leung-poI7DelFiVA-unsplash.jpg";
 
 const categories = ref(["All", "Menu", "Restaurant", "Video"]);
 
@@ -41,27 +42,27 @@ const images = ref([
   {
     id: 1,
     category: "Menu",
-    src: "/src/assets/jason-leung-poI7DelFiVA-unsplash.jpg",
+    src: galleryImg,
   },
   {
     id: 2,
     category: "Menu",
-    src: "/src/assets/jason-leung-poI7DelFiVA-unsplash.jpg",
+    src: galleryImg,
   },
   {
     id: 3,
     category: "Menu",
-    src: "/src/assets/jason-leung-poI7DelFiVA-unsplash.jpg",
+    src: galleryImg,
   },
   {
     id: 4,
     category: "Menu",
-    src: "/src/assets/jason-leung-poI7DelFiVA-unsplash.jpg",
+    src: galleryImg,
   },
   {
     id: 5,
     category: "Restaurant",
-    src: "/src/assets/jason-leung-poI7DelFiVA-unsplash.jpg",
+    src: galleryImg,
   },
   {
     id: 6,
