@@ -1,6 +1,6 @@
 <template>
   <div class="gallery">
-    <div class="categories">
+    <div class="categories" data-aos="zoom-in-up">
       <Button
         v-for="category in categories"
         :key="category"
@@ -11,8 +11,19 @@
       </Button>
     </div>
 
+    <div class="bold-separator" data-aos="zoom-in-up">
+      <div class="line"></div>
+      <div class="dot"></div>
+      <div class="line"></div>
+    </div>
+
     <div class="images-grid">
-      <div v-for="image in filteredImages" :key="image.id" class="image-card">
+      <div
+        v-for="image in filteredImages"
+        :key="image.id"
+        class="image-card"
+        data-aos="zoom-in-up"
+      >
         <img :src="image.src" :alt="image.alt" />
       </div>
     </div>
@@ -102,6 +113,9 @@ const filteredImages = computed(() => {
   gap: 25px;
   padding: 90px 150px;
   color: black;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
 
   .categories {
     display: flex;
@@ -110,22 +124,43 @@ const filteredImages = computed(() => {
     margin-bottom: 30px;
 
     button {
-      padding: 10px 20px;
-      border: 1px solid #ccc;
-      background: #f9f9f9;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 18px;
+      font-weight: bold;
       transition: 0.3s;
+      color: var(--p-color);
+      background: none;
+      border: none;
+      font-family: "Source Sans Pro", sans-serif;
 
       &.active {
-        background: black;
-        color: white;
-        border-color: black;
+        color: var(--primary);
       }
 
       &:hover {
-        background: #eee;
+        color: var(--primary);
       }
+    }
+  }
+
+  .bold-separator {
+    text-align: center;
+    display: flex;
+    align-items: baseline;
+    gap: 100px;
+    margin: 10px 0px 40px 0px;
+
+    .line {
+      width: 130px;
+      height: 1px;
+      background: var(--primary);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: var(--black);
+      border-radius: 50%;
     }
   }
 
@@ -146,6 +181,20 @@ const filteredImages = computed(() => {
           transform: scale(1.05);
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .gallery {
+    padding: 90px 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .gallery {
+    .images-grid {
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
   }
 }
