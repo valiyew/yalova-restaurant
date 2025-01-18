@@ -145,9 +145,8 @@ const filteredImages = computed(() => {
   }
 
   .bold-separator {
-    text-align: center;
     display: flex;
-    align-items: baseline;
+    place-items: center;
     gap: 100px;
     margin: 10px 0px 40px 0px;
 
@@ -196,6 +195,14 @@ const filteredImages = computed(() => {
   .gallery {
     .images-grid {
       grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+
+    .bold-separator {
+      gap: 50px;
+      width: 100%;
+      .line {
+        width: 50%;
+      }
     }
   }
 }

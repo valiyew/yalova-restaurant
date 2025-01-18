@@ -1,5 +1,5 @@
 <template>
-  <div class="image-container">
+  <div class="image-container" id="gallery">
     <img src="../assets/jason-leung-poI7DelFiVA-unsplash.jpg" alt="" />
     <div class="overlay"></div>
     <div class="contact-title">

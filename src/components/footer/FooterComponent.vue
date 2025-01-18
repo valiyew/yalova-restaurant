@@ -48,7 +48,11 @@
         <p data-aos="zoom-in-up">© Yalova 2015 .</p>
         <span data-aos="zoom-in-up"> All rights reserved.</span>
       </div>
-      <p data-aos="zoom-in-up">Back To Top</p>
+
+      <a href="#home" class="back-home">
+        <i class="fa-solid fa-up-long"></i>
+        <p>Back To Top</p>
+      </a>
     </div>
   </div>
 </template>
@@ -235,10 +239,39 @@ footer {
         font-family: "Playball", cursive;
       }
     }
-    p {
-      color: (--white);
-      font-size: 16px;
-      font-family: "Playball", cursive;
+
+    .back-home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      transition: 0.5s;
+      text-decoration: none;
+
+      i {
+        position: absolute;
+        top: -20px;
+        color: var(--primary);
+        font-size: 22px;
+        opacity: 0;
+      }
+
+      p {
+        font-size: 18px;
+        font-family: "Playball", cursive;
+        color: var(--primary);
+      }
+
+      &:hover {
+        i {
+          top: 1px;
+          opacity: 1;
+        }
+
+        p {
+          opacity: 0;
+        }
+      }
     }
   }
 
