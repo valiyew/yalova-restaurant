@@ -131,6 +131,11 @@ const isOpenModal = ref(false);
 
 const selectedChef = (id) => {
   isOpenModal.value = !isOpenModal.value;
+
+  if (isOpenModal.value) {
+    document.body.style.overflow = "hidden";
+  }
+
   const chef = chefs.find((item) => item.id === id);
 
   if (chef) {
@@ -140,6 +145,9 @@ const selectedChef = (id) => {
 
 const toggleModal = () => {
   isOpenModal.value = !isOpenModal.value;
+  if (!isOpenModal.value) {
+    document.body.style.overflow = "";
+  }
 };
 </script>
 
